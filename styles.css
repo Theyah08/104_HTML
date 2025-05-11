@@ -1,12 +1,13 @@
 body {
     background: #f0f0f0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: 100vh;  
+    
 }
 
 #container {
-    display: flex;
-    justify-content: center; 
-    align-items: center;     
-    height: 100vh; 
     width: 600px;    
     background-color: white;  
     padding: 20px;   
@@ -17,9 +18,10 @@ h1 {
     color: #333;
     text-align: center;
     border-bottom: 2px solid lightgray ;
+    
 }
 
-p { 
+section p { 
     color: #555;
     margin-bottom: 15px;
 }
@@ -29,10 +31,14 @@ ul {
     margin-top: 20px;
 }
 
-li:not(:last-child) {
+li {
     padding: 8px;
+}
+
+li:not(:last-child) {
     border-bottom: 1px solid #eee;
 }
+
 
 li:hover {
     background-color: lightblue;
@@ -41,8 +47,8 @@ li:hover {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1 fr);
-    grid-template-rows: repeat(2, 1 fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
     gap: 10px;
 }
 
@@ -56,11 +62,22 @@ li:hover {
 }
 
 footer {
-    background: lightgray;
+    background: lightgrey;
     text-align: center;
     padding: 20px;
     margin-top: 20px;
 }
+
 footer p {
     margin: 0;
+}
+
+
+/* Extra */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    border-bottom: none;
+    gap: 15px;
 }
